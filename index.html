@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tatkal Rush · book before the quota closes</title>
+<meta name="description" content="A speedrun parody of Tatkal train booking. 10 minutes, a burning server, WL 47, failing payments and relatives with opinions. How many tickets can you book?">
+<meta name="theme-color" content="#14275e">
+<meta property="og:title" content="Tatkal Rush">
+<meta property="og:description" content="How many Tatkal tickets can you book in 10 minutes? Parody. No real trains were harmed.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@800&family=Barlow+Condensed:wght@600;700;800&family=Barlow+Semi+Condensed:wght@600;700;800&family=Courier+Prime:wght@400;700&family=Doto:wght@700;900&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=10">
+</head>
+<body>
+<header class="portal">
+  <button id="logo" class="logo" aria-label="Home">
+    <svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true"><rect x="6" y="5" width="28" height="25" rx="7" fill="#f37021"/><rect x="10" y="9" width="20" height="9" rx="2.5" fill="#fff"/><circle cx="13.5" cy="24" r="2.4" fill="#fff"/><circle cx="26.5" cy="24" r="2.4" fill="#fff"/><path d="M11 30l-4 6M29 30l4 6M9 34h22" stroke="#f37021" stroke-width="2.6" stroke-linecap="round"/></svg>
+    <span><b>RailJhatka</b><small>NextGen eTicketing · parody</small></span>
+  </button>
+  <div class="portal-right">
+    <span class="load">SERVER LOAD <b>98%</b></span>
+    <button id="mute" class="icon-btn" aria-label="Sound">🔊</button>
+  </div>
+</header>
+<div class="ticker" aria-hidden="true"><div id="ticker-in" class="ticker-in"></div></div>
+<main id="view"></main>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <filter id="ink" x="-6%" y="-10%" width="112%" height="120%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="4" result="warp"/>
+    <feDisplacementMap in="SourceGraphic" in2="warp" scale="3.2" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.95" numOctaves="1" seed="9" result="grain"/>
+    <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -5 3.3" result="holes"/>
+    <feComposite in="d" in2="holes" operator="in"/>
+  </filter>
+</defs></svg>
+<div id="overlay"></div>
+<div id="phone" aria-live="polite"></div>
+<div id="toasts" aria-live="polite"></div>
+<script type="module" src="js/main.js?v=10"></script>
+</body>
+</html>

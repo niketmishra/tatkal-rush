@@ -1,0 +1,11 @@
+{
+  "name": "Tatkal Rush",
+  "short_name": "Tatkal Rush",
+  "description": "Speedrun parody of Tatkal ticket booking.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f1e8",
+  "theme_color": "#14275e",
+  "icons": [{ "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
